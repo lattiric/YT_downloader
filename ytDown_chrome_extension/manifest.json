@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "YT Downloader",
+    "version": "1.0",
+    "description": "First chrome extension, meant to help download content from YT for personal use.",
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "YT Extension"
+    },
+    "permissions": [
+        "tabs",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["popup.js"]
+        }
+    ]
+}
