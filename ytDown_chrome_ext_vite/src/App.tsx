@@ -1,6 +1,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
+import './dl_api.js'
 
 function App() {
 
@@ -19,9 +20,9 @@ function App() {
         },
         args: [curUrl]
       });
-    } catch {
-      alert("Problem with current page (current tab)")
-      console.log("Problem with current page (current tab)")
+    } catch(err) {
+      alert("'Problem with current page (current tab): "+err)
+      console.log("Problem with current page (current tab): "+err)
     }
   }
 
